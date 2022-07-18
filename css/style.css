@@ -25,11 +25,18 @@
    url('../fonts/rubik-v20-latin_cyrillic-700.woff') format('woff'); 
 }
 
+html {
+   height: 100%;
+   scroll-behavior: smooth;
+}
+
 * {
    box-sizing: border-box;
 }
 
 body {
+   position: relative;
+   height: 100%;
    margin: 0;
    padding: 0;
    font-size: 16px;
@@ -387,10 +394,118 @@ input, label {
    line-height: 24px;
    color: #FFF;
    text-decoration: none;
+   border: none;
+}
+
+.main-middle-link:hover {
+   cursor: pointer;
 }
 
 .list-link {
    margin-top: 40px;
+}
+
+/* MODAL */
+
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   width: 100%;
+   height: 100%;
+   background-color: #4f4f4f79;
+   padding-top: 115px;
+   display: none;
+}
+
+.modal-open {
+   display: block;
+}
+
+.modal-window {
+   position: relative;
+   top: -500px;
+   width: 850px;
+   padding: 50px;
+   border-radius: 20px;
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 50px auto;
+
+   animation-name: animation;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes animation {
+   0% {
+
+   }
+
+   50% {
+
+   }
+
+   100% {
+      top: 0;
+   }
+}
+
+.modal-window-animation {
+
+}
+
+.modal-text-wrapper {
+   max-width: 512px;
+   margin-bottom: 25px;
+}
+
+.modal-window-heading {
+   font-weight: 500;
+   font-size: 26px;
+   line-height: 34px;
+   text-align: center;
+}
+
+.turn-on-btn {
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 28px;
+   color: #FFFFFF;
+   border: none;
+   background: none;
+   padding: 15px 40px;
+   background: #F78B3B;
+   border-radius: 10px;
+}
+
+.turn-on-btn:hover {
+   cursor: pointer;
+}
+
+.modal-close {
+   border: none;
+   background: none;
+   position: absolute;
+   top: 25px;
+   right: 25px;
+   width: 14px;
+   height: 14px;
+   background-image: url("../images/close-modal.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   opacity: 0.6;
+}
+
+.modal-close:hover {
+   cursor: pointer;
+}
+
+.overflow {
+   overflow-x: hidden;
 }
 
 /* FEEDBACK */

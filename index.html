@@ -178,7 +178,7 @@
                   <img class="main-middle-box-img" src="./images/bell-icon.svg" alt="bell icon" width="31" height="35">
                   <p class="main-middle-box-text">Хотите узнать новости первыми? подключите уведомления!</p>
                </div>
-               <a class="main-middle-link" href="#">Включит  уведомления!</a>
+               <button class="main-middle-link js-open-modal" type="button">Включить уведомления!</button>
             </div>
          </div>
          
@@ -356,5 +356,19 @@
          </div>
       </div>
    </footer>
+
+   <!-- MODAL START -->
+   <div class="modal">
+      <div class="modal-window">
+         <div class="modal-text-wrapper">
+            <h3 class="modal-window-heading">Хотите быть в курсе свежих новостей?  Включите уведомления!
+            </h3>
+         </div>
+         <button class="turn-on-btn" type="btn">Включить</button>
+         <button class="modal-close js-modal-close"></button>
+      </div>
+   </div>
+
+   <script src="./js/main.js"></script>
 </body>
 </html>
